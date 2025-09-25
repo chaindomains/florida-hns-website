@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florida</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #F5F5DC;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #00BFFF, #FF7F50);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #FF7F50;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #FF7F50;
+      padding: 1rem;
+    }
+    .mobile-nav.show {
+      display: flex;
+    }
+    section {
+      padding: 2rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+    footer {
+      background-color: #00BFFF;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Florida</h1>
+    <p>The Sunshine State — beaches, oranges, and endless summer.</p>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Highlights</a>
+    <a href="#">Culture</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Home</a>
+    <a href="#">Highlights</a>
+    <a href="#">Culture</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <section>
+    <h2>Florida Highlights</h2>
+    <ul>
+      <li>🏖️ Miami & South Beach</li>
+      <li>🐊 Everglades National Park</li>
+      <li>🎢 Orlando Theme Parks</li>
+      <li>🍊 Citrus Groves & Farmers Markets</li>
+      <li>🌴 Key West & the Overseas Highway</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Powered by Handshake • Visit us at <strong>florida/</strong></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
